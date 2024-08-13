@@ -12,7 +12,24 @@ const business = {
     reviewCount: 354
 };
 
-function Business({image, name, address, city, state, zipcode, category, rating, reviewCount}) {
+function Business() {
+    return (
+        <div>
+            <img src={business.image}/>
+            <p>{business.name}</p>
+            <p>{business.address}</p>
+            <p>{business.city}</p>
+            <p>{business.state}</p>
+            <p>{business.zipcode}</p>
+            <p>{business.category}</p>
+            <p>{business.rating}</p>
+            <p>{business.reviewCount}</p>
+        </div>
+    )
+};
+
+
+/* function Business({image, name, address, city, state, zipcode, category, rating, reviewCount}) {
     return (
         <div>
             <img src={image}/>
@@ -26,4 +43,6 @@ function Business({image, name, address, city, state, zipcode, category, rating,
             <p>{reviewCount}</p>
         </div>
     )
-};
+}; */
+
+export default Business;
