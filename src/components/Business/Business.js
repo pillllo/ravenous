@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Business.module.css'
 
-function Business({business}) {
+function Business({ business }) {
     return (
       <div className={styles.Business}>
         <div className={styles.imageContainer}>
