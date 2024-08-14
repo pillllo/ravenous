@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Business.module.css'
 
 const business = {
     image: 'https://scontent-waw2-1.xx.fbcdn.net/v/t39.30808-6/271726852_949492359329744_4075964811737373797_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=hmOZFVDggFsQ7kNvgG1uAqr&_nc_ht=scontent-waw2-1.xx&oh=00_AYB7U5aIhZnSdHlUml5qj2A5vKUVafMuccOLN_g08bDseg&oe=66C17AE3',
@@ -14,8 +15,32 @@ const business = {
 
 function Business() {
     return (
-        <div>
-            <img src={business.image}/>
+      <div className={styles.Business}>
+        <div className={styles.imageContainer}>
+          <img src={business.image} alt="" />
+        </div>
+        <h2>{business.name}</h2>
+        <div className={styles.BusinessInformation}>
+          <div className={styles.BusinessAddress}>
+            <p>{business.address}</p>
+            <p>{business.city}</p>
+            <p>{`${business.state} ${business.zipcode}`}</p>
+          </div>
+          <div className={styles.BusinessReviews}>
+            <h3>{business.category.toUpperCase()}</h3>
+            <h3 className={styles.rating}>{`${business.rating} stars`}</h3>
+            <p>{`${business.reviewCount} reviews`}</p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+
+/* function Business() {
+    return (
+        <div className={styles.Business}>
+            <img src={business.image} alt=''/>
             <p>{business.name}</p>
             <p>{business.address}</p>
             <p>{business.city}</p>
@@ -26,7 +51,7 @@ function Business() {
             <p>{business.reviewCount}</p>
         </div>
     )
-};
+}; */
 
 
 /* function Business({image, name, address, city, state, zipcode, category, rating, reviewCount}) {
